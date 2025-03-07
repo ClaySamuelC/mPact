@@ -11,5 +11,9 @@ config_version=5
 [application]
 
 config/name="mPact"
-config/features=PackedStringArray("4.3", "Forward Plus")
-config/icon="res://icon.svg"
+run/main_scene="uid://bt13jko8i5tec"
+config/features=PackedStringArray("4.4", "Forward Plus")
+
+[autoload]
+
+GameManager="*res://multi/GameManager.gd"
