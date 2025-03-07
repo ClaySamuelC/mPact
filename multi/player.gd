@@ -10,6 +10,7 @@ var syncRot = 0
 @export var bullet :PackedScene
 
 func _ready():
+	add_to_group("baddies")
 	$MultiplayerSynchronizer.set_multiplayer_authority(str(name).to_int())
 
 func _physics_process(delta):
