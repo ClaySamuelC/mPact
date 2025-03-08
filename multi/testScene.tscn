@@ -2,12 +2,12 @@
 
 [ext_resource type="Texture2D" uid="uid://bh4xilvgu3miq" path="res://multi/icon.svg" id="1_0m6ke"]
 [ext_resource type="Script" uid="uid://djqaxi6tj1xms" path="res://multi/SceneManager.gd" id="1_br64h"]
-[ext_resource type="PackedScene" uid="uid://cwld7ti0ms68j" path="res://multi/player.tscn" id="2_7bveh"]
 [ext_resource type="Texture2D" uid="uid://bjs3d6l1epir2" path="res://arenaTopDownBattleField.png" id="4_fc2wf"]
+[ext_resource type="PackedScene" uid="uid://c31hfc77ov24a" path="res://pj_hero.tscn" id="5_xmuhs"]
 
 [node name="Node2D" type="Node2D"]
 script = ExtResource("1_br64h")
-PlayerScene = ExtResource("2_7bveh")
+PlayerScene = ExtResource("5_xmuhs")
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 
@@ -26,6 +26,9 @@ position = Vector2(389, 321)
 position = Vector2(729, 320)
 
 [node name="ArenaTopDownBattleField" type="Sprite2D" parent="."]
-position = Vector2(555, 292)
-scale = Vector2(0.643663, 0.643663)
+position = Vector2(589, 308)
+scale = Vector2(1.26508, 1.26508)
 texture = ExtResource("4_fc2wf")
+
+[node name="PJHero" parent="." instance=ExtResource("5_xmuhs")]
+position = Vector2(282, 319)
