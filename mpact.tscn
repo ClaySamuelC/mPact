@@ -1,0 +1,15 @@
+[gd_scene load_steps=2 format=3 uid="uid://cu6xypa2ehynl"]
+
+[ext_resource type="PackedScene" uid="uid://csaj2665loemu" path="res://player.tscn" id="1_kwjkv"]
+
+[node name="mpact" type="Node2D"]
+
+[node name="Player1" parent="." instance=ExtResource("1_kwjkv")]
+
+[node name="Camera2D" type="Camera2D" parent="Player1"]
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_left = 201.0
+offset_top = -44.0
+offset_right = 241.0
+offset_bottom = -4.0

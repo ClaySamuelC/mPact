@@ -1,0 +1,23 @@
+[gd_scene load_steps=4 format=3 uid="uid://csaj2665loemu"]
+
+[ext_resource type="Script" path="res://player.gd" id="1_pfxwr"]
+[ext_resource type="Texture2D" uid="uid://dqod7bxtgjyy3" path="res://icon.svg" id="2_t8diw"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_pbvuo"]
+size = Vector2(121.5, 120)
+
+[node name="Player" type="CharacterBody2D"]
+script = ExtResource("1_pfxwr")
+speed = 400.0
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_t8diw")
+
+[node name="CollideBox" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_pbvuo")
+
+[node name="Barrel" type="Marker2D" parent="."]
+position = Vector2(64, 0)
+
+[node name="ShootCooldown" type="Timer" parent="."]
+one_shot = true
