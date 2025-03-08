@@ -15,6 +15,5 @@ func _physics_process(delta):
 	self.translate(velocity * delta) 
 
 func _on_body_entered(body: Node2D) -> void:
-	
 		if self != body:
 			print("pikle")
