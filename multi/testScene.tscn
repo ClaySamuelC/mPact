@@ -1,0 +1,34 @@
+[gd_scene load_steps=5 format=3 uid="uid://bt13jko8i5tec"]
+
+[ext_resource type="Texture2D" uid="uid://bh4xilvgu3miq" path="res://multi/icon.svg" id="1_0m6ke"]
+[ext_resource type="Script" uid="uid://djqaxi6tj1xms" path="res://multi/SceneManager.gd" id="1_br64h"]
+[ext_resource type="Texture2D" uid="uid://bjs3d6l1epir2" path="res://arenaTopDownBattleField.png" id="4_fc2wf"]
+[ext_resource type="PackedScene" uid="uid://c31hfc77ov24a" path="res://pj_hero.tscn" id="5_xmuhs"]
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource("1_br64h")
+PlayerScene = ExtResource("5_xmuhs")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D"]
+visible = false
+position = Vector2(539, 582)
+scale = Vector2(6, 0.2)
+texture = ExtResource("1_0m6ke")
+
+[node name="SpawnLocations" type="Node2D" parent="."]
+
+[node name="0" type="Node2D" parent="SpawnLocations" groups=["PlayerSpawnPoint"]]
+position = Vector2(389, 321)
+
+[node name="1" type="Node2D" parent="SpawnLocations" groups=["PlayerSpawnPoint"]]
+position = Vector2(729, 320)
+
+[node name="ArenaTopDownBattleField" type="Sprite2D" parent="."]
+position = Vector2(589, 308)
+scale = Vector2(1.26508, 1.26508)
+texture = ExtResource("4_fc2wf")
+
+[node name="PJHero" parent="." instance=ExtResource("5_xmuhs")]
+position = Vector2(282, 319)
