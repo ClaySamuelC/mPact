@@ -17,8 +17,6 @@ var left = false
 var chargeTick = 0
 var chargeTickTimer = 20
 
-
-
 func _ready():
 	add_to_group("baddies")
 	$MultiplayerSynchronizer.set_multiplayer_authority(str(name).to_int())
