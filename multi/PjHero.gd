@@ -47,9 +47,10 @@ func _physics_process(delta):
 				animationPlayer.play("run")
 			else:
 				animationPlayer.play("idle")
-	else:
-		global_position = global_position.lerp(syncPos, .5)
-		rotation_degrees = lerpf(rotation_degrees, syncRot, .5)
+	#else:
+		#print("Moving with bad permissions.")
+		#global_position = global_position.lerp(syncPos, .5)
+		#rotation_degrees = lerpf(rotation_degrees, syncRot, .5)
 
 @rpc("any_peer","call_local")
 func fire():

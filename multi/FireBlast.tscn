@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://h1is6714pwc3"]
+
+[ext_resource type="Script" path="res://multi/fire_blast.gd" id="1_no6cc"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_no6cc"]
+
+[node name="Node2D2" type="Area2D"]
+script = ExtResource("1_no6cc")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_no6cc")
+
+[node name="Polygon2D" type="Polygon2D" parent="."]
+color = Color(1, 0.247059, 0.258824, 1)
+polygon = PackedVector2Array(0, -10, 7, -7, 10, 0, 7, 7, 0, 10, -7, 7, -10, 0, -7, -7)
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
